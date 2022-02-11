@@ -1,0 +1,99 @@
+<!DOCTYPE html>  <!--optional-->
+<html lang="en">
+    <head>
+        <title>demo</title>
+        <meta Charset="UTF-8">  <!--optional-->
+        <meta name="keywords" content="put important words of your web page here">
+        <meta name="description" content="put short description about your web page here">
+        <meta name="author" content="put author name of this website here">
+        <style>
+            .bg{
+                background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+                height: 100vh;
+                width: 100%;
+                padding: 20px;
+                display:flex; 
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                
+                
+
+            }
+            h1{
+                color:darkviolet;
+                font-size: 50px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
+            }
+            .card2{
+                font-family: "arial";
+                height: 250px;
+                width: 700px;
+                padding: 20px;
+                box-shadow: inset;
+                border-radius: 10px;
+                background-color: aqua;
+
+            }
+            .back{
+                height:40px;
+                width:100px;
+                font-size: 20px;
+                margin: 30px;
+                border-radius:10px;
+                border:solid 1px darkgrey;
+                background-color:blanchedalmond;
+
+            }
+            .h2{
+                font-weight:300;
+                color:grey;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="bg">
+            <h1>About Game</h1>
+            <div class="card2">
+                <h2 id="fir">Hi (^_^), 'Finding Thief' is Online game for below 14 or 15years. </h2>
+            </div>
+            <div>
+                <a href="page2.html" ><button class="back">Back</button></div></a>
+    
+            
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script>
+
+        $(document).ready(function(){
+            var first =$("#fir");
+        
+            var array=["The game enhances face reading skill and helps develop cognitive thinking by requiring deductive reasoning.",
+            " Finding Thief is a online guessing game where 4 players act as different characters viz. The King, Minister, police and The Thief. ",
+            "This Game can be played against humans or against a computer.this is a entertaining game can be learned quickly and it is a tool to make new friends.",
+            "This game provides a platform for social interaction and enhances communication skills.",
+            ];
+            console.log(array.length);
+            var index=0;
+            setInterval(function(){
+                
+                console.log(index);
+                index = (index + 1) % array.length;
+                    //console.log(index);
+                    first.fadeOut(600,function(){
+                        (first).text(array[index]);
+                        (first).fadeIn(2000);
+
+                    });    
+                    
+                },5000);
+                
+        });
+    </script>
+    
+    </body>
+</html>
