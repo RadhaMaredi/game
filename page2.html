@@ -1,0 +1,137 @@
+<!DOCTYPE html>  <!--optional-->
+<html lang="en">
+    <head>
+        <title>demo</title>
+        <meta Charset="UTF-8">  <!--optional-->
+        <meta name="keywords" content="put important words of your web page here">
+        <meta name="description" content="put short description about your web page here">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>    
+        <meta name="author" content="put author name of this website here">
+        <style>
+
+        body {
+            margin: 0;
+            font-family: "roboto";
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color:lightpink;
+            width: auto;
+        }
+
+        .topnav a {
+            float: right;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            font-size: bold;
+        }
+
+        .topnav a:hover {
+            background-color:lightgoldenrodyellow;
+            color:lightblue;
+        }
+
+        .topnav a.active {
+            background-color:burlywood;
+            color: white;
+        }
+        #searchInput{
+            height:40px;
+            border:1px solid darkred;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        .styling{ 
+            padding: 10px 10px;
+            margin-top: 20px;
+            margin-right: 16px;
+            background-color: lightgray;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+
+        }
+        .searchCon{
+            background-image: repeating-linear-gradient(45deg, red , yellow 20%, green 30%); 
+            height:100vh;
+            width: 100%; 
+            box-shadow: 8px palevioletred;
+        }
+        .con{
+            display:flex; 
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+        #searchResults{
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+            width:50%;
+            border-radius: 10px;
+            margin: 30px;
+            height: 300px;    
+        }
+        .inviteButton{
+            height:40px;
+            width:100px;
+            font-size: 25px;
+            margin-left: 30px;
+            border-radius:10px;
+            border:solid 1px darkgrey;
+            background-color: rgb(197, 235, 197);
+        }
+        .image{
+            height:250px;
+            width:60%;
+            border-radius: 25px;    
+        }
+        marquee{
+            font-size:30px;
+            color:aqua;
+            margin-top: 15px;
+        }
+    </style>
+    </head>
+
+    <body>
+    
+
+    <nav class="topnav">   
+        <a class="active" href="/home/neosoft/Desktop/TECH/Project/Game.html">Home</a>
+        <a href="/home/neosoft/Desktop/TECH/Project/Rules.html">How to play</a>
+        <a href="/home/neosoft/Desktop/TECH/Project/aboutGame.html">About</a>
+    </nav>
+
+    <div class=" searchCon con" >
+        <section>
+        <div class="d-flex"> 
+            <input type="text" placeholder="Search to add friends.." class="mt-4 mr-1" onblur="addP()" style="width:600px" id="searchInput" >
+            <i class="fa fa-search styling ml-1"></i>
+        </div>
+    </section>
+        <div id="searchResults">
+            <img src="https://thumbs.dreamstime.com/b/add-friend-icon-hospital-logo-vector-add-friend-icon-hospital-logo-stock-vector-151435944.jpg" class="image" />
+            <button class="inviteButton">Add</button>
+        </div>
+        
+        <div>
+            <a href="/home/neosoft/Desktop/TECH/Project/page3.html">
+            <button class="inviteButton" style="background-color: darkblue; color:white">Play</button>
+            </a>
+        </div>
+        <marquee behaviour="slide" direction="" ><span id="names"></span>Waiting for the Players </marquee>
+    </div>
+
+        <script src="../Project/page2.js"></script>
+    
+    </body>
+</html>

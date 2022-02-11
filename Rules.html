@@ -1,0 +1,114 @@
+<!DOCTYPE html>  <!--optional-->
+<html lang="en">
+    <head>
+        <title>demo</title>
+        <meta Charset="UTF-8">  <!--optional-->
+        <meta name="keywords" content="put important words of your web page here">
+        <meta name="description" content="put short description about your web page here">
+        <meta name="author" content="put author name of this website here">
+        <style> 
+
+        .card-container{
+          background-image: linear-gradient(to bottom right, pink, yellow,skyblue);
+                height: 100vh;
+                width: 100%;
+                padding: 20px;
+                display:flex; 
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+          
+        }
+        .back{
+                height:40px;
+                width:100px;
+                font-size: 20px;
+                margin: 30px;
+                border-radius:10px;
+                border:solid 1px darkgrey;
+                background-color:blanchedalmond;
+
+            }
+        h1{
+          font-family: fantasy;
+          font-weight: bold;
+          color:rgb(172, 162, 172);
+          font-size: 60px;
+        }
+            .click{
+              padding: 5px;
+              text-align: center;
+              margin:30px;
+              background-color: #e5eecc;
+              border: solid 1px #c3c3c3;
+            }
+            span{
+              color:darkred;
+            }
+            .sub-card{
+              height:400px;
+              width:500px;
+              border-radius: 15px;
+              border:double 4px lightseagreen;
+              background-color: greenyellow;
+              padding:20px;
+
+            }
+            
+            p {
+              padding: 20px;
+              background-color: bisque;
+              display: none;
+            }
+            </style>
+    </head>
+    <body>
+
+        <div class="card-container"> 
+          <h1>How to Play</h1>
+            <div class="sub-card">
+                
+                <div id="flip1" class="click"> <span>Click here:</span>Rule number1</div>
+                <p id="panel1">To decide their poitions Every one invest the some coins. According those coins, the position will be decided</p>
+      
+                <div id="flip2" class="click"> <span>Click here:</span>Rule number2</div>
+                <p id="panel2">Who invest more coins. that person is the king and he has to start the game</p>
+                
+                <div id="flip3" class="click"> <span>Click here:</span>Rule number3</div>
+                <p id="panel3" >King has to find Minister, minister has to find police, and police has to find Thief</p>
+                
+                <div id="flip4" class="click">  <span>Click here:</span>Rule number4</div>
+                <p id="panel4" >If you find the wrong person then you should exchange your position with that person </p>
+                
+                <div id="flip5" class="click"> <span>Click here:</span>Rule number5</div>
+                <p id="panel5">If you find the right person then you are in safe. In the end the winner will get total invested coins along with individual score of king position. like this all are get their score according to their poition </p>
+            </div>
+          <div>
+            <a href="/home/neosoft/Desktop/TECH/Project/page2.html" ><button class="back">Back</button></div></a>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+            <script> 
+                $(document).ready(function(){
+                  $("#flip1").click(function(){
+                    $("#panel1").slideToggle("slow");
+                  });
+                  $("#flip2").click(function(){
+                    $("#panel2").slideToggle("slow");
+                  });
+                  $("#flip3").click(function(){
+                    $("#panel3").slideToggle("slow");
+                  });
+                  $("#flip4").click(function(){
+                    $("#panel4").slideToggle("slow");
+                  });
+                  $("#flip5").click(function(){
+                    $("#panel5").slideToggle("slow");
+                  });
+
+                });
+                </script>
+        </div>
+    
+    </body>
+</html>
